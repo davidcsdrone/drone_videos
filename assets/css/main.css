@@ -588,13 +588,19 @@ html, body {
 	}
 }
 
-/* Scroll Indicator Responsive Positioning */
 @media screen and (max-width: 736px) {
-	#scroll-indicator {
-		bottom: 1.5rem;
-		font-size: 0.9rem;
-	}
+    #wrapper {
+        padding: 1.25em;
+    }
+    .tiles {
+        margin: 0;
+    }
+    .tiles article {
+        width: 100%;
+        margin: 1.25em 0 0 0;
+    }
 }
+
 
 @media screen and (max-width: 480px) {
 	#scroll-indicator {
