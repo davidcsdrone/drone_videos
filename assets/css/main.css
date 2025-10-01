@@ -1554,3 +1554,24 @@ footer {
     line-height: 1.6;
     letter-spacing: 0.02em;
 }
+
+.footer-link {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.3s ease, letter-spacing 0.3s ease;
+    border-bottom: none;
+    display: inline-block;
+    margin-top: 1.5rem;
+	    border-bottom: none;
+
+}
+
+.footer-link:hover {
+    color: #ffffff;
+    letter-spacing: 0.15em;
+}

@@ -3,29 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seoul</title>
+    <title>Busan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
     <style>
         html, body {
-				overscroll-behavior: none;
-				overflow-x: hidden;
-			}
-			body {
-				overscroll-behavior-y: none;
-			}
+            overscroll-behavior: contain;
+            overflow-x: hidden;
+        }
         body {
-            background-image: radial-gradient(circle at center, #0a0e27, #000000);
-            background-attachment: fixed;
+            background-color: #000000;
             color: #f1f1f1;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             box-sizing: border-box;
         }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background-color: rgba(228, 230, 244, 0.5);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            text-align: left;
+            box-sizing: border-box;
+        }
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #aaa;
+        }
         .video-container {
+            position: relative;
             padding: 4rem 2rem;
             display: flex;
             justify-content: center;
@@ -34,6 +54,8 @@
             box-sizing: border-box;
         }
         .video-wrapper {
+            position: relative;
+            z-index: 2;
             max-width: 900px;
             width: 100%;
             text-align: center;
@@ -46,7 +68,8 @@
             outline: none;
             margin-top: 0.5rem;
         }
-        #globe-section {
+        #photo-section, #globe-section {
+            background-image: radial-gradient(circle at center, #0a0e27, #000000);
             min-height: 100vh;
             width: 100%;
             display: flex;
@@ -79,15 +102,15 @@
             white-space: nowrap;
             overflow: hidden;
             border-right: 4px solid white;
-            animation: typewriter-h1 3s steps(11) 1s 1 normal both,
-                       blink-cursor-h1 750ms steps(11) 5 normal forwards;
+            animation: typewriter-h1 3s steps(10) 1s 1 normal both,
+                       blink-cursor-h1 750ms steps(10) 6 normal forwards;
         }
         @keyframes typewriter-h1 {
           from {
             width: 0;
           }
           to {
-            width: 11ch;
+            width: 10ch;
           }
         }
         @keyframes blink-cursor-h1 {
@@ -97,38 +120,6 @@
           to {
             border-right-color: transparent;
           }
-        }
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 1rem 2rem;
-            background-color: rgba(228, 230, 244, 0.5);
-            backdrop-filter: blur(10px);
-            z-index: 100;
-            text-align: left;
-            box-sizing: border-box;
-        }
-        .nav-link {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
-        .nav-link:hover {
-            color: #aaa;
-        }
-        #photo-section {
-            min-height: 100vh;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            padding: 4rem 2rem;
-            box-sizing: border-box;
         }
         .photo-wrapper {
             max-width: 900px;
@@ -151,54 +142,65 @@
     </style>
 </head>
 <body>
-<nav class="navbar">
+    <nav class="navbar">
         <a href="index.html" class="nav-link">← Go Back to Portfolio</a>
     </nav>
     <div class="video-container">
         <div class="video-wrapper">
             <h1 class="css-typewriter">부산 (Busan)</h1>
-            <video src="videos/busan_multi.mp4" autoplay loop muted controls></video>
+            <video src="videos/busan_multi.mp4" autoplay loop muted controls></video> <br><br><br>
+                        <video src="videos/busan2.mp4" autoplay loop muted controls></video>
         </div>
     </div>
 
-   
     <section id="photo-section">
         <div class="photo-wrapper">
             <h2 class="section-title">Photography</h2>
-            <img src="namsam.JPG" alt="A photo of Chicago">
+            <img src="img/images/busan_2_img.JPG" alt="A photo of Busan">
         </div>
     </section>
-     <section id="globe-section">
+
+    <section id="globe-section">
         <div class="description-container">
             <p class="description">
-
-        There are so many words to describe the capital of South Korea. Efficient, highly modern, clean, amazing food, and full of so much culture are just a few words I would describe it as.
-        When I visited Seoul in June 2024 as a college freshman study abroad, I did know what I was getting myself into. I didn't know anyone, didn't know the language
-        and aboslutely didn't know what the coming weeks as an international student would bring upon me. However, Seoul was an amazing city I am proud that I lived
-        in for three months!
-            </div>
+                Busan is South Korea's second largest city, and one that was very memorable. Known as a port city, Busan stood out to me for how much 
+                less hustle and bustle their culture was and how much more laid back everyone was. It was certainly nice compared to the very efficient pace
+                Seoul takes. Nonetheless, it was an amazing city with even more amazing sea food!
+            </p>
+        </div>
     </section>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            if (window.VANTA) {
-                window.VANTA.GLOBE({
-                    el: "#globe-section",
-                    mouseControls: true,
-                    touchControls: true,
-                    gyroControls: false,
-                    minHeight: 200.00,
-                    minWidth: 200.00,
-                    scale: 1.00,
-                    scaleMobile: 1.00,
-                    color: 0x0047a0,
-                    color2: 0xcd2e3a,
-                    backgroundColor: 0x0,
-                    backgroundAlpha: 1.00
-                });
-            }
+            VANTA.NET({
+              el: ".video-container",
+              mouseControls: true,
+              touchControls: true,
+              gyroControls: false,
+              minHeight: 200.00,
+              minWidth: 200.00,
+              scale: 1.00,
+              scaleMobile: 1.00,
+              color: 0x2049d4,
+              backgroundColor: 0x0
+            });
+            
+            VANTA.GLOBE({
+                el: "#globe-section",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x3f3fff,
+                color2: 0x9d46ff,
+                backgroundColor: 0x0,
+                backgroundAlpha: 1.00
+            });
         });
     </script>
-
 </body>
 </html>
 

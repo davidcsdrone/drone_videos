@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
     <style>
         html, body {
@@ -165,8 +167,15 @@
     <section id="photo-section">
         <div class="photo-wrapper">
             <h2 class="section-title">Photography</h2>
-            <img src="namsam.JPG" alt="A photo of Chicago">
+            <img src="img/images/nice.jpg" alt="nice">
+            <br><br><br><br>
+            <img src="img/images/near_airport.jpg" alt="nice">
+            <br><br><br><br>
+            <img src="img/images/yonsei_seoul.jpg" alt="nice">
+            <br><br><br><br>
+
         </div>
+        
     </section>
      <section id="globe-section">
         <div class="description-container">
@@ -178,24 +187,35 @@
         in for three months!
             </div>
     </section>
-    <script>
+   <script>
         document.addEventListener('DOMContentLoaded', function() {
-            if (window.VANTA) {
-                window.VANTA.GLOBE({
-                    el: "#globe-section",
-                    mouseControls: true,
-                    touchControls: true,
-                    gyroControls: false,
-                    minHeight: 200.00,
-                    minWidth: 200.00,
-                    scale: 1.00,
-                    scaleMobile: 1.00,
-                    color: 0x0047a0,
-                    color2: 0xcd2e3a,
-                    backgroundColor: 0x0,
-                    backgroundAlpha: 1.00
-                });
-            }
+            VANTA.TOPOLOGY({
+              el: ".video-container",
+              mouseControls: true,
+              touchControls: true,
+              gyroControls: false,
+              minHeight: 200.00,
+              minWidth: 200.00,
+              scale: 1.00,
+              scaleMobile: 1.00,
+              color: (15,100,205),
+              backgroundColor: 0x20202
+            });
+            
+            VANTA.GLOBE({
+                el: "#globe-section",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x3f3fff,
+                color2: 0x9d46ff,
+                backgroundColor: 0x0,
+                backgroundAlpha: 0.00
+            });
         });
     </script>
 
